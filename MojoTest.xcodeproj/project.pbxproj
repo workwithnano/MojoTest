@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EBFB3412907B79E002CC097 /* AthleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBFB3402907B79E002CC097 /* AthleteTests.swift */; };
 		3EC97A1E2907269600E80C8D /* MojoTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC97A1D2907269600E80C8D /* MojoTestApp.swift */; };
 		3EC97A202907269600E80C8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC97A1F2907269600E80C8D /* ContentView.swift */; };
 		3EC97A222907269800E80C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EC97A212907269800E80C8D /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3EBFB3402907B79E002CC097 /* AthleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteTests.swift; sourceTree = "<group>"; };
 		3EC97A1A2907269600E80C8D /* MojoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MojoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC97A1D2907269600E80C8D /* MojoTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MojoTestApp.swift; sourceTree = "<group>"; };
 		3EC97A1F2907269600E80C8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				3EC97A2E2907269800E80C8D /* MojoTestTests.swift */,
+				3EBFB3402907B79E002CC097 /* AthleteTests.swift */,
 			);
 			path = MojoTestTests;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EC97A2F2907269800E80C8D /* MojoTestTests.swift in Sources */,
+				3EBFB3412907B79E002CC097 /* AthleteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
