@@ -16,7 +16,7 @@ class DataService: ObservableObject {
     /// that this is a placeholder for such a stock API
     @Published private(set) var cachedStocks = [Stock]()
     
-    @Published private(set) var isFetching = false
+    @Published private(set) var isFetching = true
     private let dataStore = DataServiceStore()
 
     public init() { }

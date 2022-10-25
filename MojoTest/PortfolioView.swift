@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct PortfolioView: View {
+    
+    @StateObject var dataService = DataService()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Text("Data fetched")
+                .isHidden(dataService.isFetching)
+            ProgressView()
+                .isHidden(!dataService.isFetching)
+        }
+        .task {
+            Task {
+                try? await dataService.fetchAndParseData()
+            }
+        }
     }
 }
 

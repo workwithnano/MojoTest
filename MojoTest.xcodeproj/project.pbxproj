@@ -31,6 +31,7 @@
 		3EC97A5629075E2400E80C8D /* RubikMonoOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EC97A5529075E2400E80C8D /* RubikMonoOne-Regular.ttf */; };
 		3EC97A5829075E3100E80C8D /* Rubik-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EC97A5729075E3100E80C8D /* Rubik-VariableFont_wght.ttf */; };
 		3EC97A5A29075E3900E80C8D /* Rubik-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EC97A5929075E3900E80C8D /* Rubik-Italic-VariableFont_wght.ttf */; };
+		3ECB6E0029087059004C67AE /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB6DFF29087059004C67AE /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		3EC97A5729075E3100E80C8D /* Rubik-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		3EC97A5929075E3900E80C8D /* Rubik-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		3EC97A5B29075E5700E80C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3ECB6DFF29087059004C67AE /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,10 +145,11 @@
 				3EC97A4B29073B0700E80C8D /* Data */,
 				3EC97A1D2907269600E80C8D /* MojoTestApp.swift */,
 				3EC97A1F2907269600E80C8D /* ContentView.swift */,
-				3EC97A212907269800E80C8D /* Assets.xcassets */,
-				3EC97A232907269800E80C8D /* Preview Content */,
 				3EC97A472907310D00E80C8D /* PortfolioView.swift */,
 				3EC97A492907312C00E80C8D /* SearchView.swift */,
+				3ECB6DFE2908703E004C67AE /* Utilities */,
+				3EC97A212907269800E80C8D /* Assets.xcassets */,
+				3EC97A232907269800E80C8D /* Preview Content */,
 				3EC97A5429075E0E00E80C8D /* Resources */,
 			);
 			path = MojoTest;
@@ -202,6 +205,14 @@
 				3EC97A5929075E3900E80C8D /* Rubik-Italic-VariableFont_wght.ttf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3ECB6DFE2908703E004C67AE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3ECB6DFF29087059004C67AE /* View+Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +359,7 @@
 				3EBFB34E2908452D002CC097 /* FlatData.swift in Sources */,
 				3EC97A482907310D00E80C8D /* PortfolioView.swift in Sources */,
 				3EC97A4D29073D5A00E80C8D /* Stock.swift in Sources */,
+				3ECB6E0029087059004C67AE /* View+Extensions.swift in Sources */,
 				3EC97A1E2907269600E80C8D /* MojoTestApp.swift in Sources */,
 				3EBFB3462907C204002CC097 /* DataServiceStore.swift in Sources */,
 				3EBFB3482907C593002CC097 /* DataService.swift in Sources */,

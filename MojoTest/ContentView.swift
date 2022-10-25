@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject var dataService = DataService()
-    
     var body: some View {
         TabView {
             PortfolioView()
@@ -22,9 +20,6 @@ struct ContentView: View {
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
                 }
-        }
-        .task {
-            try? await dataService.fetchAndParseData()
         }
     }
 }
