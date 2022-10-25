@@ -10,6 +10,7 @@ import Foundation
 class DataService: ObservableObject {
     
     @Published private(set) var portfolioPositions = [Position]()
+    @Published private(set) var portfolioPositionsGroupedByType = [PositionGroup]()
     
     /// In a real app, this stock data would be fetched on-demand, in order
     /// to provide real-time pricing data. Marking as "cached" to signify
@@ -20,6 +21,21 @@ class DataService: ObservableObject {
     private let dataStore = DataServiceStore()
 
     public init() { }
+    
+    private static func groupPositionsByType(positions: [Position]) -> [PositionGroup] {
+        var groupedPositions = [PositionGroup]()
+        // Initialize all type groups in order
+        for type in PositionType.allCases {
+            groupedPositions.append(PositionGroup(type: type, positions: [Position]()))
+        }
+        for position in positions {
+            // Since we already initialized all type groups above,
+            // we can force unwrap the array elements safely
+            let typeIndex = PositionType.allCases.firstIndex(of: position.type)!
+            groupedPositions[typeIndex].positions.append(position)
+        }
+        return groupedPositions
+    }
 }
 
 extension DataService {
@@ -32,7 +48,7 @@ extension DataService {
         
         // Parse portfolio positions
         portfolioPositions = loadedData.positions
-        print(portfolioPositions)
+        portfolioPositionsGroupedByType = DataService.groupPositionsByType(positions: loadedData.positions)
         // Parse cached stocks
         // Parse wallet details
     }

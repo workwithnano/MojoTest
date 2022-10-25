@@ -24,7 +24,7 @@ struct Stock {
     // TODO: track price with precision, in Cents (Int) rather than Dollars (Double)
     let currentPrice: Double?
     let currentPriceFormatted: String?
-    let athlete: Athlete?
+    let athlete: Athlete
 }
 
 extension Stock: Decodable {
@@ -38,6 +38,12 @@ extension Stock: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         currentPrice = try container.decodeIfPresent(Double.self, forKey: .currentPrice)
         currentPriceFormatted = try container.decodeIfPresent(String.self, forKey: .currentPriceFormatted)
-        athlete = try container.decodeIfPresent(Athlete.self, forKey: .athlete)
+        athlete = try container.decode(Athlete.self, forKey: .athlete)
+    }
+}
+
+extension Stock: Identifiable, Hashable {
+    var id: Athlete {
+        return athlete
     }
 }

@@ -7,34 +7,31 @@
 
 import Foundation
 
-//"currentValueFormatted": "$997.61",
-//       "shareQuantity": 13.51873839,
-//       "totalGainDollarsFormatted": "-$0.1095",
-//       "totalGainPercentageFormatted": "-0.24%",
-//       "type": "LONG",
-//       "stock": {
-//         "athlete": {
-//           "firstName": "Tom",
-//           "lastName": "Brady",
-//           "playingNow": false,
-//           "espnHeadshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2330.png&w=350&h=254",
-//           "team": {
-//             "playingToday": false
-//           }
-//         }
-//       }
-
-enum PositionType: String, Codable {
-    case long = "LONG"
-    case short = "SHORT"
-}
-
 struct Position {
+    let id = UUID()
     let shareQuantity: Double // TODO: Increase precision, use Ints
     let totalGainDollarsFormatted: String?
     let totalGainPercentageFormatted: String?
     let type: PositionType
     let stock: Stock
+}
+
+enum PositionType: String, Codable, CaseIterable, Identifiable {
+    case long = "LONG"
+    case short = "SHORT"
+    
+    var id: String {
+        return self.rawValue
+    }
+}
+
+enum PositionFormat: String {
+    case dollars = "Total Return $"
+    case percentage = "Total Return %"
+}
+
+extension Position: Identifiable {
+    // TODO: Custom identification code. We don't currently have IDs given to us by back-end
 }
 
 extension Position: Decodable {
@@ -54,4 +51,20 @@ extension Position: Decodable {
         type =  try container.decode(PositionType.self, forKey: .type)
         stock = try container.decode(Stock.self, forKey: .stock)
     }
+}
+
+/// In order to handle grouping in SwiftUI, it helps to have an actual struct/class
+/// that can conform to `Identifiable` for placement in lists. Otherwise this
+/// could have been a typealias
+struct PositionGroup {
+    let type: PositionType
+    var positions: [Position]
+}
+
+extension PositionGroup: Identifiable {
+    var id: PositionType {
+        return type
+    }
+    
+    
 }

@@ -16,6 +16,29 @@ struct Athlete {
     let headShotUrl: String?
     let team: Team?
     let playingNow: Bool?
+    
+    // MARK: - Helpers
+    
+    /// Returns the Athlete's first character in their first name.
+    /// If they are missing a first name, returns a blank string
+    ///
+    /// > Note: Does not include a "." (period) following the initial
+    var firstInitial: String {
+        return "\(firstName?.first ?? Character(""))"
+    }
+    
+    var firstInitialWithPeriod: String {
+        if firstInitial.count > 0 {
+            return "\(firstInitial)."
+        }
+        else {
+            return ""
+        }
+    }
+    
+    var fullName: String {
+        return "\(firstName ?? "") \(lastName)".trimmingCharacters(in: .whitespaces)
+    }
 }
 
 extension Athlete: Decodable {
@@ -59,6 +82,20 @@ extension Athlete {
         else {
             return (names[0..<names.count-1].joined(separator: " ").trimmingCharacters(in: .whitespaces), String(names.last!))
         }
+    }
+}
+
+extension Athlete: Identifiable, Hashable {
+    static func == (lhs: Athlete, rhs: Athlete) -> Bool {
+        return lhs.fullName == rhs.fullName
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(fullName)
+    }
+    
+    var id: String {
+        return fullName
     }
 }
 
