@@ -1,0 +1,304 @@
+{
+  "data": {
+    "stockPriceHistoryChange": {
+      "formattedPercentageChange": "2.13%",
+      "formattedPriceChange": "$1.54",
+      "priceHistory": [
+        {
+          "midFormatted": "$72.42",
+          "mid": 72.41505000000001,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-12T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.52",
+          "mid": 72.5229,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-13T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.77",
+          "mid": 72.76595,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-14T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.75",
+          "mid": 72.7547,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-15T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.74",
+          "mid": 72.7407,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-16T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$73.16",
+          "mid": 73.1607,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-17T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$73.14",
+          "mid": 73.1423,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-18T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$73.14",
+          "mid": 73.1413,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-19T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$73.14",
+          "mid": 73.1426,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-20T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.34",
+          "mid": 72.3353,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-21T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.34",
+          "mid": 72.3364,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-22T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.33",
+          "mid": 72.3344,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-23T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.33",
+          "mid": 72.3314,
+          "isLowPrice": true,
+          "isHighPrice": false,
+          "createdAt": "2021-12-24T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.33",
+          "mid": 72.3322,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-25T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.33",
+          "mid": 72.3326,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-26T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.62",
+          "mid": 72.6198,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-27T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.60",
+          "mid": 72.6041,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-28T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.60",
+          "mid": 72.5976,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-29T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.60",
+          "mid": 72.5994,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-30T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.60",
+          "mid": 72.6014,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2021-12-31T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.60",
+          "mid": 72.6048,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2022-01-01T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$72.60",
+          "mid": 72.6018,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2022-01-02T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$73.29",
+          "mid": 73.2891,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2022-01-03T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$73.27",
+          "mid": 73.2685,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2022-01-04T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$73.27",
+          "mid": 73.26820000000001,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2022-01-05T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$73.27",
+          "mid": 73.2679,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2022-01-06T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$73.28",
+          "mid": 73.2793,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2022-01-07T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$73.28",
+          "mid": 73.2775,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2022-01-08T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$73.28",
+          "mid": 73.2792,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2022-01-09T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$73.66",
+          "mid": 73.65575,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2022-01-10T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$73.98",
+          "mid": 73.9753,
+          "isLowPrice": false,
+          "isHighPrice": true,
+          "createdAt": "2022-01-11T00:00:00.000Z"
+        },
+        {
+          "midFormatted": "$73.96",
+          "mid": 73.9642,
+          "isLowPrice": false,
+          "isHighPrice": false,
+          "createdAt": "2022-01-12T00:00:00.000Z"
+        }
+      ]
+    },
+    "stock": {
+      "currentPrice": 73.968,
+      "currentPriceFormatted": "$73.97",
+      "athlete": {
+        "name": "Tom Brady",
+        "espnHeadshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2330.png&w=350&h=254"
+      }
+    },
+    "positions": [
+      {
+        "currentValueFormatted": "$997.61",
+        "shareQuantity": 13.51873839,
+        "totalGainDollarsFormatted": "-$0.1095",
+        "totalGainPercentageFormatted": "-0.24%",
+        "type": "LONG",
+        "stock": {
+          "athlete": {
+            "firstName": "Tom",
+            "lastName": "Brady",
+            "playingNow": false,
+            "espnHeadshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2330.png&w=350&h=254",
+            "team": {
+              "playingToday": false
+            }
+          }
+        }
+      },
+      {
+        "currentValueFormatted": "$933.00",
+        "shareQuantity": 20.6536894,
+        "totalGainPercentageFormatted": "-6.70%",
+        "totalGainDollarsFormatted": "$14.28",
+        "type": "LONG",
+        "stock": {
+          "athlete": {
+            "firstName": "Lonzo",
+            "lastName": "Ball",
+            "playingNow": false,
+            "espnHeadshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066421.png&w=350&h=254",
+            "team": {
+              "playingToday": true
+            }
+          }
+        }
+      },
+      {
+        "currentValueFormatted": "$5,023.42",
+        "shareQuantity": -168.85106555,
+        "totalGainPercentageFormatted": "0.47%",
+        "totalGainDollarsFormatted": "$46.25",
+        "type": "SHORT",
+        "stock": {
+          "athlete": {
+            "firstName": "Mikal",
+            "lastName": "Bridges",
+            "playingNow": false,
+            "espnHeadshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3147657.png&w=350&h=254",
+            "team": {
+              "playingToday": false
+            }
+          }
+        }
+      }
+    ],
+    "totalPortfolioGainDollarsFormatted": "$46.15",
+    "totalPortfolioGainPercentageFormatted": "-0.51%",
+    "totalPortfolioValueFormatted": "$8,953.85",
+    "wallet": {
+      "totalBalanceFormatted": "$48,609.96"
+    }
+  }
+}
