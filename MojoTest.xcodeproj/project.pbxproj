@@ -16,6 +16,13 @@
 		3EC97A3B2907269800E80C8D /* MojoTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC97A3A2907269800E80C8D /* MojoTestUITestsLaunchTests.swift */; };
 		3EC97A482907310D00E80C8D /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC97A472907310D00E80C8D /* PortfolioView.swift */; };
 		3EC97A4A2907312C00E80C8D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC97A492907312C00E80C8D /* SearchView.swift */; };
+		3EC97A4D29073D5A00E80C8D /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC97A4C29073D5A00E80C8D /* Stock.swift */; };
+		3EC97A4F29073D6800E80C8D /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC97A4E29073D6800E80C8D /* Athlete.swift */; };
+		3EC97A51290740AF00E80C8D /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC97A50290740AF00E80C8D /* Position.swift */; };
+		3EC97A5329074F2100E80C8D /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC97A5229074F2100E80C8D /* Team.swift */; };
+		3EC97A5629075E2400E80C8D /* RubikMonoOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EC97A5529075E2400E80C8D /* RubikMonoOne-Regular.ttf */; };
+		3EC97A5829075E3100E80C8D /* Rubik-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EC97A5729075E3100E80C8D /* Rubik-VariableFont_wght.ttf */; };
+		3EC97A5A29075E3900E80C8D /* Rubik-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EC97A5929075E3900E80C8D /* Rubik-Italic-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,14 @@
 		3EC97A3A2907269800E80C8D /* MojoTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MojoTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3EC97A472907310D00E80C8D /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		3EC97A492907312C00E80C8D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		3EC97A4C29073D5A00E80C8D /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		3EC97A4E29073D6800E80C8D /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
+		3EC97A50290740AF00E80C8D /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		3EC97A5229074F2100E80C8D /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		3EC97A5529075E2400E80C8D /* RubikMonoOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RubikMonoOne-Regular.ttf"; sourceTree = "<group>"; };
+		3EC97A5729075E3100E80C8D /* Rubik-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		3EC97A5929075E3900E80C8D /* Rubik-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		3EC97A5B29075E5700E80C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +113,15 @@
 		3EC97A1C2907269600E80C8D /* MojoTest */ = {
 			isa = PBXGroup;
 			children = (
+				3EC97A5B29075E5700E80C8D /* Info.plist */,
+				3EC97A4B29073B0700E80C8D /* Data */,
 				3EC97A1D2907269600E80C8D /* MojoTestApp.swift */,
 				3EC97A1F2907269600E80C8D /* ContentView.swift */,
 				3EC97A212907269800E80C8D /* Assets.xcassets */,
 				3EC97A232907269800E80C8D /* Preview Content */,
 				3EC97A472907310D00E80C8D /* PortfolioView.swift */,
 				3EC97A492907312C00E80C8D /* SearchView.swift */,
+				3EC97A5429075E0E00E80C8D /* Resources */,
 			);
 			path = MojoTest;
 			sourceTree = "<group>";
@@ -131,6 +149,27 @@
 				3EC97A3A2907269800E80C8D /* MojoTestUITestsLaunchTests.swift */,
 			);
 			path = MojoTestUITests;
+			sourceTree = "<group>";
+		};
+		3EC97A4B29073B0700E80C8D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3EC97A4C29073D5A00E80C8D /* Stock.swift */,
+				3EC97A4E29073D6800E80C8D /* Athlete.swift */,
+				3EC97A50290740AF00E80C8D /* Position.swift */,
+				3EC97A5229074F2100E80C8D /* Team.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3EC97A5429075E0E00E80C8D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3EC97A5529075E2400E80C8D /* RubikMonoOne-Regular.ttf */,
+				3EC97A5729075E3100E80C8D /* Rubik-VariableFont_wght.ttf */,
+				3EC97A5929075E3900E80C8D /* Rubik-Italic-VariableFont_wght.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +276,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EC97A5A29075E3900E80C8D /* Rubik-Italic-VariableFont_wght.ttf in Resources */,
 				3EC97A252907269800E80C8D /* Preview Assets.xcassets in Resources */,
 				3EC97A222907269800E80C8D /* Assets.xcassets in Resources */,
+				3EC97A5629075E2400E80C8D /* RubikMonoOne-Regular.ttf in Resources */,
+				3EC97A5829075E3100E80C8D /* Rubik-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,9 +305,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EC97A51290740AF00E80C8D /* Position.swift in Sources */,
 				3EC97A4A2907312C00E80C8D /* SearchView.swift in Sources */,
+				3EC97A4F29073D6800E80C8D /* Athlete.swift in Sources */,
 				3EC97A202907269600E80C8D /* ContentView.swift in Sources */,
+				3EC97A5329074F2100E80C8D /* Team.swift in Sources */,
 				3EC97A482907310D00E80C8D /* PortfolioView.swift in Sources */,
+				3EC97A4D29073D5A00E80C8D /* Stock.swift in Sources */,
 				3EC97A1E2907269600E80C8D /* MojoTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +474,7 @@
 				DEVELOPMENT_TEAM = RZ75PMAV34;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MojoTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -457,6 +504,7 @@
 				DEVELOPMENT_TEAM = RZ75PMAV34;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MojoTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
