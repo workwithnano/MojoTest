@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3EBFB3412907B79E002CC097 /* AthleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBFB3402907B79E002CC097 /* AthleteTests.swift */; };
-		3EBFB3462907C204002CC097 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBFB3452907C204002CC097 /* DataService.swift */; };
+		3EBFB3462907C204002CC097 /* DataServiceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBFB3452907C204002CC097 /* DataServiceStore.swift */; };
+		3EBFB3482907C593002CC097 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBFB3472907C593002CC097 /* DataService.swift */; };
+		3EBFB34A2907CB8F002CC097 /* DecoderHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBFB3492907CB8F002CC097 /* DecoderHelpers.swift */; };
+		3EBFB34C290841FD002CC097 /* StockPriceHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBFB34B290841FD002CC097 /* StockPriceHistory.swift */; };
+		3EBFB34E2908452D002CC097 /* FlatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBFB34D2908452D002CC097 /* FlatData.swift */; };
 		3EC97A1E2907269600E80C8D /* MojoTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC97A1D2907269600E80C8D /* MojoTestApp.swift */; };
 		3EC97A202907269600E80C8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC97A1F2907269600E80C8D /* ContentView.swift */; };
 		3EC97A222907269800E80C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EC97A212907269800E80C8D /* Assets.xcassets */; };
@@ -46,7 +50,11 @@
 
 /* Begin PBXFileReference section */
 		3EBFB3402907B79E002CC097 /* AthleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteTests.swift; sourceTree = "<group>"; };
-		3EBFB3452907C204002CC097 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		3EBFB3452907C204002CC097 /* DataServiceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceStore.swift; sourceTree = "<group>"; };
+		3EBFB3472907C593002CC097 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		3EBFB3492907CB8F002CC097 /* DecoderHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderHelpers.swift; sourceTree = "<group>"; };
+		3EBFB34B290841FD002CC097 /* StockPriceHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPriceHistory.swift; sourceTree = "<group>"; };
+		3EBFB34D2908452D002CC097 /* FlatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatData.swift; sourceTree = "<group>"; };
 		3EC97A1A2907269600E80C8D /* MojoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MojoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC97A1D2907269600E80C8D /* MojoTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MojoTestApp.swift; sourceTree = "<group>"; };
 		3EC97A1F2907269600E80C8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,7 +105,8 @@
 		3EBFB3422907BBE7002CC097 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				3EBFB3452907C204002CC097 /* DataService.swift */,
+				3EBFB3452907C204002CC097 /* DataServiceStore.swift */,
+				3EBFB3472907C593002CC097 /* DataService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -172,6 +181,9 @@
 				3EC97A4E29073D6800E80C8D /* Athlete.swift */,
 				3EC97A50290740AF00E80C8D /* Position.swift */,
 				3EC97A5229074F2100E80C8D /* Team.swift */,
+				3EBFB3492907CB8F002CC097 /* DecoderHelpers.swift */,
+				3EBFB34B290841FD002CC097 /* StockPriceHistory.swift */,
+				3EBFB34D2908452D002CC097 /* FlatData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -322,12 +334,16 @@
 				3EC97A51290740AF00E80C8D /* Position.swift in Sources */,
 				3EC97A4A2907312C00E80C8D /* SearchView.swift in Sources */,
 				3EC97A4F29073D6800E80C8D /* Athlete.swift in Sources */,
+				3EBFB34C290841FD002CC097 /* StockPriceHistory.swift in Sources */,
 				3EC97A202907269600E80C8D /* ContentView.swift in Sources */,
+				3EBFB34A2907CB8F002CC097 /* DecoderHelpers.swift in Sources */,
 				3EC97A5329074F2100E80C8D /* Team.swift in Sources */,
+				3EBFB34E2908452D002CC097 /* FlatData.swift in Sources */,
 				3EC97A482907310D00E80C8D /* PortfolioView.swift in Sources */,
 				3EC97A4D29073D5A00E80C8D /* Stock.swift in Sources */,
 				3EC97A1E2907269600E80C8D /* MojoTestApp.swift in Sources */,
-				3EBFB3462907C204002CC097 /* DataService.swift in Sources */,
+				3EBFB3462907C204002CC097 /* DataServiceStore.swift in Sources */,
+				3EBFB3482907C593002CC097 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

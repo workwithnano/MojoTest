@@ -30,7 +30,7 @@ enum PositionType: String, Codable {
 }
 
 struct Position {
-    let shareQuantity: Int // Don't want to use Floats for fractional shares, not precise
+    let shareQuantity: Double // TODO: Increase precision, use Ints
     let totalGainDollarsFormatted: String?
     let totalGainPercentageFormatted: String?
     let type: PositionType
@@ -48,7 +48,7 @@ extension Position: Decodable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        shareQuantity = try container.decode(Int.self, forKey: .shareQuantity)
+        shareQuantity = try container.decode(Double.self, forKey: .shareQuantity)
         totalGainDollarsFormatted = try container.decodeIfPresent(String.self, forKey: .totalGainDollarsFormatted)
         totalGainPercentageFormatted = try container.decodeIfPresent(String.self, forKey: .totalGainPercentageFormatted)
         type =  try container.decode(PositionType.self, forKey: .type)
