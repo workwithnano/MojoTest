@@ -57,7 +57,6 @@ internal actor DataServiceStore {
         }
         
         loadedFlatData = flatData!
-        print(loadedFlatData!)
         return loadedFlatData!
     }
 }
