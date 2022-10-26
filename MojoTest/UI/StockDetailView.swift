@@ -16,6 +16,7 @@ struct StockDetailView: View {
     }
     var body: some View {
         Text("\(stock.athlete.fullName)")
+            .navigationTitle("\(stock.athlete.fullName)")
     }
 }
 
