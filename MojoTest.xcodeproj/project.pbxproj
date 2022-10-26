@@ -33,6 +33,7 @@
 		3EC97A5A29075E3900E80C8D /* Rubik-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EC97A5929075E3900E80C8D /* Rubik-Italic-VariableFont_wght.ttf */; };
 		3ECB6E0029087059004C67AE /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB6DFF29087059004C67AE /* View+Extensions.swift */; };
 		3ECB6E032908AD0C004C67AE /* StockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB6E022908AD0C004C67AE /* StockDetailView.swift */; };
+		3ECB6E052908B49F004C67AE /* PortfolioDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB6E042908B49F004C67AE /* PortfolioDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		3EC97A5B29075E5700E80C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3ECB6DFF29087059004C67AE /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		3ECB6E022908AD0C004C67AE /* StockDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailView.swift; sourceTree = "<group>"; };
+		3ECB6E042908B49F004C67AE /* PortfolioDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				3EC97A472907310D00E80C8D /* PortfolioView.swift */,
 				3EC97A492907312C00E80C8D /* SearchView.swift */,
 				3ECB6E022908AD0C004C67AE /* StockDetailView.swift */,
+				3ECB6E042908B49F004C67AE /* PortfolioDetailsView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				3ECB6E032908AD0C004C67AE /* StockDetailView.swift in Sources */,
 				3EC97A4A2907312C00E80C8D /* SearchView.swift in Sources */,
 				3EC97A4F29073D6800E80C8D /* Athlete.swift in Sources */,
+				3ECB6E052908B49F004C67AE /* PortfolioDetailsView.swift in Sources */,
 				3EBFB34C290841FD002CC097 /* StockPriceHistory.swift in Sources */,
 				3EC97A202907269600E80C8D /* ContentView.swift in Sources */,
 				3EBFB34A2907CB8F002CC097 /* DecoderHelpers.swift in Sources */,

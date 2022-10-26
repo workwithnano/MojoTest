@@ -46,6 +46,10 @@ struct PortfolioView: View {
                 .navigationDestination(for: Stock.self) { stock in
                     StockDetailView(stock: stock)
                 }
+                
+                NavigationLink(destination: PortfolioDetailsView()) {
+                    Label("Portfolio Details", systemImage: "chevron.right")
+                }
             }
                 .navigationTitle("Portfolio")
                 .isHidden(dataService.isFetching)
