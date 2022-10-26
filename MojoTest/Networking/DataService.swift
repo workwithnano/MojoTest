@@ -54,7 +54,7 @@ extension DataService {
         // Parse portfolio positions
         portfolioPositions = loadedData.positions
         portfolioPositionsGroupedByType = DataService.groupPositionsByType(positions: loadedData.positions)
-        // Parse cached stocks
+        
         // Parse wallet details
         totalPortfolioGainDollarsFormatted = loadedData.totalPortfolioGainDollarsFormatted
         totalPortfolioGainPercentageFormatted = loadedData.totalPortfolioGainPercentageFormatted

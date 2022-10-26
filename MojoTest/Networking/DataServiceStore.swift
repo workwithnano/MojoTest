@@ -57,6 +57,43 @@ internal actor DataServiceStore {
         }
         
         loadedFlatData = flatData!
+        loadedFlatData = DataServiceStore.shoehorn(stockPriceHistory: loadedFlatData!.stockPriceHistoryChange, into: loadedFlatData!)
+        loadedFlatData = DataServiceStore.shoehorn(currentStockPriceDataFrom: loadedFlatData!.stock, into: loadedFlatData!)
         return loadedFlatData!
+    }
+    
+    /// Takes the hanging `stockPriceHistoryChange` object from the root `data`
+    /// object from the sample API and attaches it to the Tom Brady position's stock
+    static func shoehorn(stockPriceHistory: StockPriceHistory, into flatData: FlatData) -> FlatData {
+        
+        var mutatedFlatData = flatData
+        mutatedFlatData.stock.priceHistory = stockPriceHistory
+        
+        for (i, _) in mutatedFlatData.positions.enumerated() {
+            // TODO: use proper object comparison, even though technically
+            // I had to infer that this price history belongs to Tom Brady
+            // so maybe this is exactly the right type of comparison ;-)
+            if mutatedFlatData.positions[i].stock.athlete.fullName == "Tom Brady" {
+                mutatedFlatData.positions[i].stock.priceHistory = stockPriceHistory
+            }
+        }
+        
+        return mutatedFlatData
+    }
+    
+    /// Takes the hanging current price data from hte `stock` object from the root `data`
+    /// object from the sample API and attaches it to the Tom Brady position's stock
+    static func shoehorn(currentStockPriceDataFrom stockWithPriceData: Stock, into flatData: FlatData) -> FlatData {
+        var mutatedFlatData = flatData
+        
+        for (i, _) in mutatedFlatData.positions.enumerated() {
+            if mutatedFlatData.positions[i].stock == stockWithPriceData {
+                mutatedFlatData.positions[i].stock.currentPriceFormatted = stockWithPriceData.currentPriceFormatted
+                mutatedFlatData.positions[i].stock.currentPrice = stockWithPriceData.currentPrice
+            }
+            
+        }
+        
+        return mutatedFlatData
     }
 }

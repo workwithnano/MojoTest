@@ -12,8 +12,15 @@ import Foundation
 ///
 struct FlatData {
     let stockPriceHistoryChange: StockPriceHistory
-    let stock: Stock
-    let positions: [Position]
+    
+    /// > Note: This is mutatable due to the need to shoehorn in
+    /// the price history from a hanging object in the flat JSON
+    var stock: Stock
+    
+    /// > Note: This is mutatable due to the need to shoehorn in
+    /// the price history from a hanging object in the flat JSON
+    var positions: [Position]
+    
     let totalPortfolioGainDollarsFormatted: String
     let totalPortfolioGainPercentageFormatted: String
     let totalPortfolioValueFormatted: String

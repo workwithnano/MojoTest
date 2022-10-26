@@ -9,13 +9,17 @@ import SwiftUI
 
 struct StockDetailView: View {
     
-    @State private var stock: Stock
+    private var stock: Stock
     
     init(stock: Stock) {
         self.stock = stock
     }
     var body: some View {
-        Text("\(stock.athlete.fullName)")
+        VStack {
+            // TODO: How to handle a missing price, "<No Price>" is not acceptable
+            Text("\(stock.currentPriceFormatted ?? "<No Price Data Found for \(stock.athlete.fullName)>")")
+            Text("\(stock.priceHistory?.formattedPercentageChange ?? "<No Percentage Change Data Found for \(stock.athlete.fullName)>")")
+        }
             .navigationTitle("\(stock.athlete.fullName)")
     }
 }

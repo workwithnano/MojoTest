@@ -7,24 +7,27 @@
 
 import Foundation
 
-//"currentPrice": 73.968,
-//     "currentPriceFormatted": "$73.97",
-//     "athlete": {
-//       "name": "Tom Brady",
-//       "espnHeadshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2330.png&w=350&h=254"
-//     }
-
-
-
 /// Open questions:
 /// - Is `Athlete` the de-facto unique identifier for every `Stock` object?
 ///
 
 struct Stock {
+    
     // TODO: track price with precision, in Cents (Int) rather than Dollars (Double)
-    let currentPrice: Double?
-    let currentPriceFormatted: String?
+    
+    /// > Note: This is mutatable due to the need to shoehorn in
+    /// the price history from a hanging object in the flat JSON
+    var currentPrice: Double?
+    
+    /// > Note: This is mutatable due to the need to shoehorn in
+    /// the price history from a hanging object in the flat JSON
+    var currentPriceFormatted: String?
+    
     let athlete: Athlete
+    
+    /// > Note: This is mutatable due to the need to shoehorn in
+    /// the price history from a hanging object in the flat JSON
+    var priceHistory: StockPriceHistory? = nil
 }
 
 extension Stock: Decodable {
@@ -43,6 +46,10 @@ extension Stock: Decodable {
 }
 
 extension Stock: Identifiable, Hashable {
+    static func == (lhs: Stock, rhs: Stock) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     var id: Athlete {
         return athlete
     }
