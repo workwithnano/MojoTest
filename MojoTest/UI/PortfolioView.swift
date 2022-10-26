@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct PortfolioView: View {
     
@@ -76,6 +77,9 @@ struct PortfolioView: View {
                 try? await dataService.fetchAndParseData()
                 positionFormat = self.positionFormat
             }
+        }
+        .onAppear() {
+            NavigationBarStyles.navigationBarFontSetAppearance()
         }
     }
 }

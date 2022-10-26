@@ -34,6 +34,7 @@
 		3ECB6E0029087059004C67AE /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB6DFF29087059004C67AE /* View+Extensions.swift */; };
 		3ECB6E032908AD0C004C67AE /* StockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB6E022908AD0C004C67AE /* StockDetailView.swift */; };
 		3ECB6E052908B49F004C67AE /* PortfolioDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB6E042908B49F004C67AE /* PortfolioDetailsView.swift */; };
+		3ECB6E0729092050004C67AE /* AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB6E0629092050004C67AE /* AppStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		3ECB6DFF29087059004C67AE /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		3ECB6E022908AD0C004C67AE /* StockDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailView.swift; sourceTree = "<group>"; };
 		3ECB6E042908B49F004C67AE /* PortfolioDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDetailsView.swift; sourceTree = "<group>"; };
+		3ECB6E0629092050004C67AE /* AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 				3EC97A492907312C00E80C8D /* SearchView.swift */,
 				3ECB6E022908AD0C004C67AE /* StockDetailView.swift */,
 				3ECB6E042908B49F004C67AE /* PortfolioDetailsView.swift */,
+				3ECB6E0629092050004C67AE /* AppStyles.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			files = (
 				3EC97A51290740AF00E80C8D /* Position.swift in Sources */,
 				3ECB6E032908AD0C004C67AE /* StockDetailView.swift in Sources */,
+				3ECB6E0729092050004C67AE /* AppStyles.swift in Sources */,
 				3EC97A4A2907312C00E80C8D /* SearchView.swift in Sources */,
 				3EC97A4F29073D6800E80C8D /* Athlete.swift in Sources */,
 				3ECB6E052908B49F004C67AE /* PortfolioDetailsView.swift in Sources */,
