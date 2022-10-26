@@ -119,3 +119,16 @@ extension Color {
         }
     }
 }
+
+// Mark: - Menus & Buttons
+struct DropdownMenu: MenuStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        Menu(configuration)
+            .tint(Color.backgroundLightGray)
+            .buttonStyle(.borderedProminent)
+            .buttonBorderShape(.capsule)
+            .customFont(.subheadline) // TODO: standardize font sizes around items that don't match UIFont.TextStyle names
+            .fontWeight(.medium)
+            .foregroundColor(.black)
+    }
+}
