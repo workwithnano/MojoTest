@@ -95,3 +95,27 @@ class NavigationBarStyles {
         UINavigationBar.appearance().scrollEdgeAppearance = navigationAppearance
     }
 }
+
+// Mark: - Colors
+extension Color {
+    static var negativeColor: Color {
+        get {
+            return Color("NegativeColor")
+        }
+    }
+    static var positiveColor: Color {
+        get {
+            return Color("PositiveColor")
+        }
+    }
+    static var foregroundLightGray: Color {
+        get {
+            return Color("ForegroundLightGray")
+        }
+    }
+    static var backgroundLightGray: Color {
+        get {
+            return Color("BackgroundLightGray")
+        }
+    }
+}
