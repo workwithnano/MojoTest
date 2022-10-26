@@ -12,6 +12,11 @@ class DataService: ObservableObject {
     @Published private(set) var portfolioPositions = [Position]()
     @Published private(set) var portfolioPositionsGroupedByType = [PositionGroup]()
     
+    @Published private(set) var totalPortfolioGainDollarsFormatted: String = ""
+    @Published private(set) var totalPortfolioGainPercentageFormatted: String = ""
+    @Published private(set) var totalPortfolioValueFormatted: String = ""
+    @Published private(set) var walletTotalBalanceFormatted: String = ""
+    
     /// In a real app, this stock data would be fetched on-demand, in order
     /// to provide real-time pricing data. Marking as "cached" to signify
     /// that this is a placeholder for such a stock API
@@ -51,6 +56,10 @@ extension DataService {
         portfolioPositionsGroupedByType = DataService.groupPositionsByType(positions: loadedData.positions)
         // Parse cached stocks
         // Parse wallet details
+        totalPortfolioGainDollarsFormatted = loadedData.totalPortfolioGainDollarsFormatted
+        totalPortfolioGainPercentageFormatted = loadedData.totalPortfolioGainPercentageFormatted
+        totalPortfolioValueFormatted = loadedData.totalPortfolioValueFormatted
+        walletTotalBalanceFormatted = loadedData.walletTotalBalanceFormatted
     }
 }
 

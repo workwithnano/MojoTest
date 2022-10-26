@@ -11,11 +11,19 @@ struct PortfolioView: View {
     
     @StateObject var dataService = DataService()
     
+    /// Sets the initial position format, and updates related UI whenever the
+    /// value is set
     @State var positionFormat: PositionFormat = .dollars {
         didSet {
-            // TODO: Update the UI
+            switch positionFormat {
+            case .percentage:
+                totalPortfolioGainFormatted = dataService.totalPortfolioGainPercentageFormatted
+            case .dollars:
+                totalPortfolioGainFormatted = dataService.totalPortfolioGainDollarsFormatted
+            }
         }
     }
+    @State var totalPortfolioGainFormatted: String = ""
     
     @State private var stockSelection: UUID?
     
@@ -23,7 +31,7 @@ struct PortfolioView: View {
         NavigationStack {
             VStack(alignment: .leading) {
                 HStack {
-                    Text("$XX.XX")
+                    Text(totalPortfolioGainFormatted)
                     Text("Total")
                 }
                 Menu(positionFormat.rawValue) {
@@ -50,6 +58,13 @@ struct PortfolioView: View {
                 NavigationLink(destination: PortfolioDetailsView()) {
                     Label("Portfolio Details", systemImage: "chevron.right")
                 }
+                
+                Text("Available Funds")
+                
+                HStack {
+                    Text("Total")
+                    Text(dataService.walletTotalBalanceFormatted)
+                }
             }
                 .navigationTitle("Portfolio")
                 .isHidden(dataService.isFetching)
@@ -59,6 +74,7 @@ struct PortfolioView: View {
         .task {
             Task {
                 try? await dataService.fetchAndParseData()
+                positionFormat = self.positionFormat
             }
         }
     }
