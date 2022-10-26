@@ -96,7 +96,7 @@ struct PortfolioView: View {
                                 Text(typeGroup.type.rawValue.capitalized) // Capital-casing per design spec
                                     .frame(alignment: .leading)
                                     .customFont(.subheadline)
-                                    .padding(EdgeInsets(top: 14, leading: 0, bottom: 0, trailing: 0))
+                                    .padding(EdgeInsets(top: 14, leading: 0, bottom: 6, trailing: 0))
                                 Divider()
                             }
                         }
