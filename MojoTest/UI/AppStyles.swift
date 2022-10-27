@@ -58,11 +58,15 @@ private var fontDescriptions: [UIFont.TextStyle: CustomFontDescription] = [
 
 // MARK: - Navigation Bar Appearance
 class NavigationBarStyles {
+    
+    @Environment(\.colorScheme) static private var colorScheme
+    
     static func navigationBarFontSetAppearance(){
         
         let navigationAppearance = UINavigationBarAppearance()
         
         navigationAppearance.configureWithTransparentBackground()
+        navigationAppearance.backgroundColor = (colorScheme == .light ? UIColor.white : UIColor.black)
         
         let fontTitleText = UIFontMetrics(forTextStyle: .title1).scaledFont(for: UIFont(name: fontDescriptions[.title1]!.0, size: fontDescriptions[.title1]!.1)!)
         navigationAppearance.titleTextAttributes = [.font: fontTitleText]
