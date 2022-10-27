@@ -15,12 +15,41 @@ struct StockDetailView: View {
         self.stock = stock
     }
     var body: some View {
-        VStack {
-            // TODO: How to handle a missing price, "<No Price>" is not acceptable
-            Text("\(stock.currentPriceFormatted ?? "<No Price Data Found for \(stock.athlete.fullName)>")")
-            Text("\(stock.priceHistory?.formattedPercentageChange ?? "<No Percentage Change Data Found for \(stock.athlete.fullName)>")")
+        ScrollView {
+            LazyVStack(alignment: .leading, spacing: 0) {
+                HStack(spacing: 0) {
+                    VStack(spacing: 0) {
+                        // TODO: How to handle a missing price, "<No Price>" is not acceptable
+                        Text("\(stock.currentPriceFormatted ?? "<No Price Data Found for \(stock.athlete.fullName)>")")
+                            .customFont(.largeTitle)
+                        FormattedAmountText(formattedAmount: "\(stock.priceHistory?.formattedPriceChange ?? "<No Price Change Data Found for \(stock.athlete.fullName)>") (\(stock.priceHistory?.formattedPercentageChange ?? "<No Percentage Change Data Found for \(stock.athlete.fullName)>"))")
+                            .customFont(.body)
+                            .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+                    }
+                }
+            }
+            .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
         }
-            .navigationTitle("\(stock.athlete.fullName)")
+        VStack {
+            Divider()
+            Button {
+                // do nothing for now
+            } label: {
+                Text("Trade")
+                    .frame(maxWidth: .infinity)
+                    .padding(8)
+            }
+            .customFont(.body)
+            .fontWeight(.bold)
+            .tint(stock.priceHistory?.formattedPercentageChange.starts(with: "-") ?? false ? Color.negativeColor : Color.positiveColor)
+            .buttonStyle(.borderedProminent)
+            .buttonBorderShape(.roundedRectangle(radius: 12))
+            .padding(EdgeInsets(top: 10, leading: 24, bottom: 10, trailing: 24))
+            Divider()
+        }
+        .frame(maxWidth: .infinity)
+        .background(Color.backgroundLightGray.clipped())
+        .navigationTitle("\(stock.athlete.fullName)")
     }
 }
 
