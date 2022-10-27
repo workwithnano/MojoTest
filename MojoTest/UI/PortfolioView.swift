@@ -148,6 +148,7 @@ struct PortfolioView: View {
                     .isHidden(!dataService.isFetching)
             }
             .padding()
+            Divider()
         }
         .task {
             Task {
