@@ -13,9 +13,7 @@ struct StockDetailView: View {
     private var stock: Stock
     
     @State private var chartLowValue: Double = 0
-    @State private var chartLowData: HistoricalPrice?
     @State private var chartHighValue: Double = 1000 // TODO: What is a rational default y-axis upper bound for the chart?
-    @State private var chartHighData: HistoricalPrice?
     @State private var chartPriceMaximums = [HistoricalPrice]()
     
     init(stock: Stock) {
@@ -97,12 +95,10 @@ struct StockDetailView: View {
             // This assumes we can trust the isLowPrice and isHighPrice variables from the API
             if historicalPrice.isLowPrice {
                 chartLowValue = historicalPrice.mid
-                chartLowData = historicalPrice
                 chartPriceMaximums.append(historicalPrice)
             }
             if historicalPrice.isHighPrice {
                 chartHighValue = historicalPrice.mid
-                chartHighData = historicalPrice
                 chartPriceMaximums.append(historicalPrice)
             }
         }
