@@ -115,3 +115,32 @@ struct DropdownMenu: MenuStyle {
             .foregroundColor(.black)
     }
 }
+
+struct GenericNavigationLabel: LabelStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack {
+            configuration.title
+            Spacer()
+            configuration.icon
+        }
+        .customFont(.body)
+        .foregroundStyle(.foreground)
+    }
+}
+
+// MARK: - Text formatting
+struct FormattedAmountText: View {
+    
+    let formattedAmount: String
+    
+    var body: some View {
+        HStack(alignment: .center) {
+            Image(systemName: "\(formattedAmount.starts(with: "-") ? "arrowtriangle.down.fill" : "arrowtriangle.up.fill")")
+                .scaleEffect(x: 0.75, y: 0.75, anchor: .center) // Make the arrow 75% the size of the rest of the label, per design spec
+                .foregroundStyle(formattedAmount.starts(with: "-") ? Color.negativeColor : Color.positiveColor)
+            Text(formattedAmount)
+                .foregroundStyle(formattedAmount.starts(with: "-") ? Color.negativeColor : Color.positiveColor)
+        }
+    }
+    
+}
