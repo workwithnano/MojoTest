@@ -33,11 +33,7 @@ struct PortfolioView: View {
             ScrollView {
                 VStack(alignment: .leading) {
                     HStack {
-                        Image(systemName: "\(totalPortfolioGainFormatted.starts(with: "-") ? "arrowtriangle.down.fill" : "arrowtriangle.up.fill")")
-                            .scaleEffect(x: 0.75, y: 0.75, anchor: .center) // Make the arrow 75% the size of the rest of the label, per design spec
-                            .foregroundStyle(totalPortfolioGainFormatted.starts(with: "-") ? Color.negativeColor : Color.positiveColor)
-                        Text(totalPortfolioGainFormatted)
-                            .foregroundStyle(totalPortfolioGainFormatted.starts(with: "-") ? Color.negativeColor : Color.positiveColor)
+                        FormattedAmountText(formattedAmount: totalPortfolioGainFormatted)
                         Text("Total")
                             .foregroundColor(Color.gray)
                             .fontWeight(.regular)
