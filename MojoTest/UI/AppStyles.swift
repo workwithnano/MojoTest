@@ -62,6 +62,8 @@ class NavigationBarStyles {
         
         let navigationAppearance = UINavigationBarAppearance()
         
+        navigationAppearance.configureWithTransparentBackground()
+        
         let fontTitleText = UIFontMetrics(forTextStyle: .title1).scaledFont(for: UIFont(name: fontDescriptions[.title1]!.0, size: fontDescriptions[.title1]!.1)!)
         navigationAppearance.titleTextAttributes = [.font: fontTitleText]
         
