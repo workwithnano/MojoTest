@@ -40,7 +40,21 @@ internal actor DataServiceStore {
         }
         var flatData: FlatData?
         do {
-        flatData = try JSONDecoder().decode(FlatData.self, from: data)
+            let decoder = JSONDecoder()
+            // TODO: Refactor this date decoding so it's not in the middle of decoding code
+            decoder.dateDecodingStrategy = .custom { decoder in
+                let container = try decoder.singleValueContainer()
+                let dateString = try container.decode(String.self)
+                
+                let formatter = ISO8601DateFormatter()
+                formatter.formatOptions.insert(.withFractionalSeconds)
+                if let date = formatter.date(from: dateString) {
+                    return date
+                }
+                
+                throw DecodingError.dataCorruptedError(in: container, debugDescription: "Cannot decode date string \(dateString)")
+            }
+            flatData = try decoder.decode(FlatData.self, from: data)
         } catch let DecodingError.dataCorrupted(context) {
             print(context)
         } catch let DecodingError.keyNotFound(key, context) {

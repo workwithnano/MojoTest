@@ -14,7 +14,7 @@ struct StockPriceHistory {
     
     let formattedPercentageChange: String
     let formattedPriceChange: String
-    let priceHistory: [HistoricalPrice]
+    let historicalPrices: [HistoricalPrice]
     
 }
 
@@ -31,7 +31,7 @@ extension StockPriceHistory: Decodable {
         
         formattedPercentageChange = try container.decode(String.self, forKey: .formattedPercentageChange)
         formattedPriceChange = try container.decode(String.self, forKey: .formattedPriceChange)
-        priceHistory = try container.decode([HistoricalPrice].self, forKey: .priceHistory)
+        historicalPrices = try container.decode([HistoricalPrice].self, forKey: .priceHistory)
         
     }
 }
@@ -47,5 +47,5 @@ struct HistoricalPrice: Decodable, Hashable {
     let mid: Double // TODO: improve precision by converting to Int
     let isLowPrice: Bool
     let isHighPrice: Bool
-    let createdAt: String
+    let createdAt: Date
 }
