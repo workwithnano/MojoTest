@@ -66,28 +66,49 @@ struct PortfolioView: View {
                             Section() {
                                 ForEach(typeGroup.positions) { position in
                                     NavigationLink(value: position.stock) {
-                                        AsyncImage(url: URL(string: "\(position.stock.athlete.headShotUrl ?? "https://via.placeholder.com/350x254?text=No+Headshot+Provided")"))
-                                            { phase in
-                                                if let image = phase.image {
-                                                    image
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fit)
-                                                  } else if phase.error != nil { // Error downloading
-                                                    Image(systemName: "figure.american.football")
-                                                          .resizable()
-                                                          .aspectRatio(contentMode: .fit)
-                                                  } else { // Empty
-                                                    Image(systemName: "figure.american.football")
-                                                          .resizable()
-                                                          .aspectRatio(contentMode: .fit)
-                                                  }
+                                        HStack(alignment: .bottom) {
+                                            AsyncImage(url: URL(string: "\(position.stock.athlete.headShotUrl ?? "https://via.placeholder.com/350x254?text=No+Headshot+Provided")"))
+                                                { phase in
+                                                    if let image = phase.image {
+                                                        image
+                                                            .resizable()
+                                                            .aspectRatio(contentMode: .fit)
+                                                            .frame(alignment: .bottom)
+                                                      } else if phase.error != nil { // Error downloading
+                                                        Image(systemName: "figure.american.football")
+                                                              .resizable()
+                                                              .aspectRatio(contentMode: .fit)
+                                                      } else { // Empty
+                                                        Image(systemName: "figure.american.football")
+                                                              .resizable()
+                                                              .aspectRatio(contentMode: .fit)
+                                                      }
+                                                }
+                                                .frame(width: 60, height: 44)
+                                            HStack(alignment: .center) {
+                                                VStack(alignment: .leading, spacing: 0) {
+                                                    Text("\(position.stock.athlete.firstInitialWithPeriod) \(position.stock.athlete.lastName)")
+                                                        .foregroundStyle(.black)
+                                                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                                                    Label {
+                                                        Text("Playing Today")
+                                                            .foregroundColor(Color.gray)
+                                                            .customFont(.caption1)
+                                                    } icon: {
+                                                        Circle()
+                                                            .fill(Color.dimYellow)
+                                                            .frame(width: 10, height: 10, alignment: .center)
+                                                    }
+                                                    .isHidden(position.stock.athlete.team?.playingToday == false, remove: true)
+                                                    .padding(EdgeInsets(top: 6, leading: 0, bottom: 6, trailing: 0))
+                                                }
+                                                Spacer()
+                                                Text("XX%")
                                             }
-                                            .frame(width: 60, height: 44)
-                                        Text("\(position.stock.athlete.firstInitialWithPeriod) \(position.stock.athlete.lastName)")
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                            .foregroundStyle(.black)
+                                            .frame(maxHeight: .infinity)
+                                        }
                                     }
-                                    .frame(maxWidth: .infinity)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
                                     .padding(EdgeInsets(top: 18, leading: 0, bottom: 0, trailing: 0))
                                     Divider()
                                         .frame(alignment: .top)
