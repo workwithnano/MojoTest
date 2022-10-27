@@ -84,7 +84,7 @@ struct PortfolioView: View {
                                             HStack(alignment: .center) {
                                                 VStack(alignment: .leading, spacing: 0) {
                                                     Text("\(position.stock.athlete.firstInitialWithPeriod) \(position.stock.athlete.lastName)")
-                                                        .foregroundStyle(.black)
+                                                        .foregroundStyle(.foreground)
                                                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                                                     Label {
                                                         Text("Playing Today")
@@ -125,14 +125,22 @@ struct PortfolioView: View {
                     
                     NavigationLink(destination: PortfolioDetailsView()) {
                         Label("Portfolio Details", systemImage: "chevron.right")
+                            .labelStyle(GenericNavigationLabel())
                     }
+                    .padding(EdgeInsets(top: 38, leading: 0, bottom: 0, trailing: 0))
                     
                     Text("Available Funds")
+                        .customFont(.title3)
+                        .padding(EdgeInsets(top: 38, leading: 0, bottom: 0, trailing: 0))
                     
                     HStack {
                         Text("Total")
+                            .fontWeight(.medium)
+                        Spacer()
                         Text(dataService.walletTotalBalanceFormatted)
                     }
+                        .customFont(.body)
+                        .padding(EdgeInsets(top: 38, leading: 0, bottom: 0, trailing: 0))
                 }
                     .navigationTitle("Portfolio")
                     .isHidden(dataService.isFetching)
