@@ -22,8 +22,8 @@ struct StockDetailView: View {
         self.stock = stock
     }
     var body: some View {
-        ScrollView {
-            GeometryReader { geometry in
+        GeometryReader { geometry in
+            ScrollView {
                 LazyVStack(alignment: .leading, spacing: 0) {
                     HStack(spacing: 0) {
                         VStack(spacing: 0) {
