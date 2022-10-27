@@ -99,9 +99,10 @@ struct PortfolioView: View {
                                                     .padding(EdgeInsets(top: 6, leading: 0, bottom: 6, trailing: 0))
                                                 }
                                                 Spacer()
-                                                Text("XX%")
+                                                FormattedAmountText(formattedAmount: position.totalGainDollarsFormatted ?? "<NO DATA>") // TODO: Handle the no-data case
                                             }
                                             .frame(maxHeight: .infinity)
+                                            .customFont(.body)
                                         }
                                     }
                                     .frame(maxWidth: .infinity, alignment: .leading)
