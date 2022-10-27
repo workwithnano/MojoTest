@@ -8,30 +8,6 @@
 import Foundation
 import SwiftUI
 
-//struct TitleStyle: ViewModifier {
-//    func body(content: Content) -> some View {
-//        content
-//            .font(.title)
-//            .lineSpacing(8)
-//            .foregroundColor(.primary)
-//    }
-//}
-//
-//struct ContentStyle: ViewModifier {
-//    func body(content: Content) -> some View {
-//        content
-//            .font(.body)
-//            .lineSpacing(4)
-//            .foregroundColor(.secondary)
-//    }
-//}
-//
-//extension Text {
-//    func textStyle<Style: ViewModifier>(_ style: Style) -> some View {
-//        ModifiedContent(content: self, modifier: style)
-//    }
-//}
-
 // From: https://stackoverflow.com/a/58971579
 extension View {
     func customFont(_ textStyle: UIFont.TextStyle) -> ModifiedContent<Self, CustomFont> {
