@@ -65,8 +65,9 @@ class NavigationBarStyles {
         
         let navigationAppearance = UINavigationBarAppearance()
         
+        // Kind of hacky way to get an opaque background, but without any shadow/divider line
         navigationAppearance.configureWithTransparentBackground()
-        navigationAppearance.backgroundColor = (colorScheme == .light ? UIColor.white : UIColor.black)
+        navigationAppearance.backgroundColor = UIColor.systemBackground
         
         let fontTitleText = UIFontMetrics(forTextStyle: .title1).scaledFont(for: UIFont(name: fontDescriptions[.title1]!.0, size: fontDescriptions[.title1]!.1)!)
         navigationAppearance.titleTextAttributes = [.font: fontTitleText]
@@ -118,7 +119,7 @@ struct DropdownMenu: MenuStyle {
             .buttonBorderShape(.capsule)
             .customFont(.subheadline) // TODO: standardize font sizes around items that don't match UIFont.TextStyle names
             .fontWeight(.medium)
-            .foregroundColor(.black)
+            .foregroundColor(.primary)
     }
 }
 
