@@ -118,6 +118,11 @@ extension Color {
             return Color("BackgroundLightGray")
         }
     }
+    static var dimYellow: Color {
+        get {
+            return Color("DimYellow")
+        }
+    }
 }
 
 // Mark: - Menus & Buttons
