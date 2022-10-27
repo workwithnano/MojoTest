@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 
+// MARK: - Custom font overrides
+
 // From: https://stackoverflow.com/a/58971579
 extension View {
     func customFont(_ textStyle: UIFont.TextStyle) -> ModifiedContent<Self, CustomFont> {
@@ -54,7 +56,7 @@ private var fontDescriptions: [UIFont.TextStyle: CustomFontDescription] = [
     .caption2: ("RubikRoman-Regular", 11.0)
 ]
 
-// Mark: - Navigation Bar Appearance
+// MARK: - Navigation Bar Appearance
 class NavigationBarStyles {
     static func navigationBarFontSetAppearance(){
         
@@ -72,7 +74,7 @@ class NavigationBarStyles {
     }
 }
 
-// Mark: - Colors
+// MARK: - Colors
 extension Color {
     static var negativeColor: Color {
         get {
@@ -101,7 +103,7 @@ extension Color {
     }
 }
 
-// Mark: - Menus & Buttons
+// MARK: - Menus & Buttons
 struct DropdownMenu: MenuStyle {
     func makeBody(configuration: Configuration) -> some View {
         Menu(configuration)
