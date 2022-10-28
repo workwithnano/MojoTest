@@ -16,6 +16,9 @@ extension View {
     func customFont(_ textStyle: UIFont.TextStyle) -> ModifiedContent<Self, CustomFont> {
         return modifier(CustomFont(textStyle: textStyle))
     }
+    func monoFont(_ textStyle: UIFont.TextStyle) -> ModifiedContent<Self, MonoFont> {
+        return modifier(MonoFont(textStyle: textStyle))
+    }
 }
 
 struct CustomFont: ViewModifier {
@@ -38,6 +41,24 @@ struct CustomFont: ViewModifier {
         let fontSize = fontMetrics.scaledValue(for: fontDescription.1)
 
         return content.font(.custom(fontDescription.0, size: fontSize))
+    }
+}
+
+struct MonoFont: ViewModifier {
+    let textStyle: UIFont.TextStyle
+    
+    func body(content: Content) -> some View {
+        guard let fontDescription = fontDescriptions[textStyle] else {
+
+            print("textStyle does not exist: \(textStyle)")
+
+            return content.font(.system(.body));
+        }
+
+        let fontMetrics = UIFontMetrics(forTextStyle: textStyle)
+        let fontSize = fontMetrics.scaledValue(for: fontDescription.1)
+
+        return content.font(.custom("RubikMonoOne-Regular", size: fontSize))
     }
 }
 
