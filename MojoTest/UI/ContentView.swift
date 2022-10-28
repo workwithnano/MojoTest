@@ -12,7 +12,6 @@ struct ContentView: View {
     var body: some View {
         TabView {
             PortfolioView()
-                .badge(2)
                 .tabItem {
                     Label("Portfolio", systemImage: "chart.pie.fill")
                 }
@@ -21,6 +20,7 @@ struct ContentView: View {
                     Label("Search", systemImage: "magnifyingglass")
                 }
         }
+        .customFont(.caption2)
     }
 }
 
