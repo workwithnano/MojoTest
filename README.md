@@ -37,8 +37,9 @@
 
 - I have no idea how you'll evaluate me based on "Stock market features" since I didn't implement trading or anything far beyond displaying prices and such, but I'm looking forward to finding out!
 
-## To-dos
+## To-dos, and things I'd spend more time on in a real-world project
 
+- Overall spend more time planning out app architecture. This project is testable, and not too painful to navigate, but if I was asked which architecture I chose, I'd have to say `MVO` (Model-View-OtherStuff). Not enough dependency injection, not enough functional programming to make separation of concerns cleaner and the code more easily testable and extensible.
 - Check if we're caching remote images properly (running in simulator seems like it re-downloads the headshots every time I open the view)
 - This is a financial app, it may be worth it to track prices using Integers so that we don't end up with floating-point rounding errors with fractions of a dollar or fractions of shares
 - Increase number of Unit Tests
