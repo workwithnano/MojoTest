@@ -10,7 +10,6 @@ import Foundation
 internal actor DataServiceStore {
     private var loadedFlatData: FlatData?
     private var url: URL {
-        // swiftlint:disable:next force_unwrapping
         urlComponents.url!
     }
 
@@ -41,19 +40,7 @@ internal actor DataServiceStore {
         var flatData: FlatData?
         do {
             let decoder = JSONDecoder()
-            // TODO: Refactor this date decoding so it's not in the middle of decoding code
-            decoder.dateDecodingStrategy = .custom { decoder in
-                let container = try decoder.singleValueContainer()
-                let dateString = try container.decode(String.self)
-                
-                let formatter = ISO8601DateFormatter()
-                formatter.formatOptions.insert(.withFractionalSeconds)
-                if let date = formatter.date(from: dateString) {
-                    return date
-                }
-                
-                throw DecodingError.dataCorruptedError(in: container, debugDescription: "Cannot decode date string \(dateString)")
-            }
+            decoder.dateDecodingStrategy = .ISO8601WithFractionalSeconds
             flatData = try decoder.decode(FlatData.self, from: data)
         } catch let DecodingError.dataCorrupted(context) {
             print(context)
