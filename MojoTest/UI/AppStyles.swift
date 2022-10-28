@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import SegmentedPicker
 
 // MARK: - Custom font overrides
 
@@ -132,6 +133,49 @@ struct GenericNavigationLabel: LabelStyle {
         }
         .customFont(.body)
         .foregroundStyle(.foreground)
+    }
+}
+
+struct SegmentedMojoPicker: View {
+    let titles: [String]
+    @Binding var selectedIndex: Int?
+
+    var body: some View {
+        SegmentedPicker(
+            titles,
+            selectedIndex: Binding(
+                get: { selectedIndex },
+                set: { selectedIndex = $0 }),
+            spacing: 10,
+            content: { item, isSelected in
+                Text(item.uppercased())
+                    .customFont(.caption1)
+                    .fontWeight(isSelected ? .medium : .regular)
+                    .foregroundColor(isSelected ? Color.white : Color.accentColor )
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 12)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.accentColor, lineWidth: (isSelected ? 0 : 1))
+                    }
+            },
+            selection: {
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.accentColor)
+            })
+    }
+}
+
+struct MojoButtonRoundedRectModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .buttonStyle(.borderedProminent)
+            .buttonBorderShape(.roundedRectangle(radius: 12))
+    }
+}
+extension View {
+    func mojoButtonRoundedRect() -> some View {
+        modifier(MojoButtonRoundedRectModifier())
     }
 }
 

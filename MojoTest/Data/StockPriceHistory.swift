@@ -49,3 +49,15 @@ struct HistoricalPrice: Decodable, Hashable {
     let isHighPrice: Bool
     let createdAt: Date
 }
+
+enum StockPriceHistoryDateRange: String, Identifiable, CaseIterable {
+    var id: String {
+        return self.rawValue
+    }
+    
+    case live
+    case twentyFourHours = "24h"
+    case oneWeek = "1w"
+    case oneMonth = "1m"
+    case sixMonths = "6m"
+}

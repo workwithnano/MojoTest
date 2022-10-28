@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftysegmentedpicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/workwithnano/SwiftySegmentedPicker",
+      "state" : {
+        "branch" : "main",
+        "revision" : "244c6b9b2750fa349e3b278a0858645e87368a64"
+      }
+    }
+  ],
+  "version" : 2
+}

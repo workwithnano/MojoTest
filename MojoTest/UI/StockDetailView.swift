@@ -16,6 +16,8 @@ struct StockDetailView: View {
     @State private var chartHighValue: Double = 1000 // TODO: What is a rational default y-axis upper bound for the chart?
     @State private var chartPriceMaximums = [HistoricalPrice]()
     
+    @State private var selectedDateRange: Int? = StockPriceHistoryDateRange.allCases.firstIndex(of: .oneMonth)
+    
     init(stock: Stock) {
         self.stock = stock
     }
@@ -47,15 +49,21 @@ struct StockDetailView: View {
                                     .foregroundColor(.secondary)
                             }
                             .symbol {
-                                
+                                 // Remove the default symbol with a no-op `symbol`. Only using the `.annotation` above
                             }
                         }
                     }
                     .chartYScale(domain: chartLowValue...chartHighValue)
                     .chartXAxis(.hidden)
                     .chartYAxis(.hidden)
-                    .frame(height: geometry.size.width*(2/3)) // make the chart a 3:2 ratio per design
+                    .frame(height: geometry.size.width*(5/9)) // make the chart a 9:5 ratio per design
                     .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0)) // TODO: Guidance needed for vertical positioning of chart
+                    
+                    VStack(alignment: .center) {
+                        SegmentedMojoPicker(titles: StockPriceHistoryDateRange.allCases.map({ $0.rawValue }), selectedIndex: $selectedDateRange)
+                    }
+                    .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0)) // Extra top padding since the chart annotations escape below the bounds of the chart canvas
+                    .frame(maxWidth: .infinity)
                 }
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
             }
@@ -72,8 +80,7 @@ struct StockDetailView: View {
             .customFont(.body)
             .fontWeight(.bold)
             .tint(stock.priceHistory?.formattedPercentageChange.starts(with: "-") ?? false ? Color.negativeColor : Color.positiveColor)
-            .buttonStyle(.borderedProminent)
-            .buttonBorderShape(.roundedRectangle(radius: 12))
+            .mojoButtonRoundedRect()
             .padding(EdgeInsets(top: 10, leading: 24, bottom: 10, trailing: 24))
             Divider()
         }
