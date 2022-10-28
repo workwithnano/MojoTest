@@ -63,23 +63,7 @@ struct PortfolioView: View {
                                 ForEach(typeGroup.positions) { position in
                                     NavigationLink(value: position.stock) {
                                         HStack(alignment: .bottom) {
-                                            AsyncImage(url: URL(string: "\(position.stock.athlete.headShotUrl ?? "https://via.placeholder.com/350x254?text=No+Headshot+Provided")"))
-                                                { phase in
-                                                    if let image = phase.image {
-                                                        image
-                                                            .resizable()
-                                                            .aspectRatio(contentMode: .fit)
-                                                            .frame(alignment: .bottom)
-                                                      } else if phase.error != nil { // Error downloading
-                                                        Image(systemName: "figure.american.football")
-                                                              .resizable()
-                                                              .aspectRatio(contentMode: .fit)
-                                                      } else { // Empty
-                                                        Image(systemName: "figure.american.football")
-                                                              .resizable()
-                                                              .aspectRatio(contentMode: .fit)
-                                                      }
-                                                }
+                                            AthleteHeadshotImage(stock: position.stock)
                                                 .frame(width: 60, height: 44)
                                             HStack(alignment: .center) {
                                                 VStack(alignment: .leading, spacing: 0) {

@@ -25,7 +25,7 @@ struct StockDetailView: View {
         GeometryReader { geometry in
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 0) {
-                    HStack(spacing: 0) {
+                    HStack(alignment: .bottom, spacing: 0) {
                         VStack(spacing: 0) {
                             // TODO: How to handle a missing price, "<No Price>" is not acceptable
                             Text("\(stock.currentPriceFormatted ?? "<No Price Data Found for \(stock.athlete.fullName)>")")
@@ -34,6 +34,9 @@ struct StockDetailView: View {
                                 .customFont(.body)
                                 .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
                         }
+                        Spacer()
+                        AthleteHeadshotImage(stock: stock)
+                            .frame(width: 90, height: 66)
                     }
                     
                     Chart {
@@ -57,7 +60,7 @@ struct StockDetailView: View {
                     .chartXAxis(.hidden)
                     .chartYAxis(.hidden)
                     .frame(height: geometry.size.width*(5/9)) // make the chart a 9:5 ratio per design
-                    .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0)) // TODO: Guidance needed for vertical positioning of chart
+                    .padding(EdgeInsets(top: 60, leading: 0, bottom: 0, trailing: 0)) // TODO: Guidance needed for vertical positioning of chart
                     
                     VStack(alignment: .center) {
                         SegmentedMojoPicker(titles: StockPriceHistoryDateRange.allCases.map({ $0.rawValue }), selectedIndex: $selectedDateRange)

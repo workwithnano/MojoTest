@@ -36,6 +36,7 @@
 		3ECB6E052908B49F004C67AE /* PortfolioDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB6E042908B49F004C67AE /* PortfolioDetailsView.swift */; };
 		3ECB6E0729092050004C67AE /* AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB6E0629092050004C67AE /* AppStyles.swift */; };
 		3ECB6E0D290B517D004C67AE /* SegmentedPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 3ECB6E0C290B517D004C67AE /* SegmentedPicker */; };
+		3ECB6E0F290B592F004C67AE /* CustomComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB6E0E290B592F004C67AE /* CustomComponents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		3ECB6E022908AD0C004C67AE /* StockDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailView.swift; sourceTree = "<group>"; };
 		3ECB6E042908B49F004C67AE /* PortfolioDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDetailsView.swift; sourceTree = "<group>"; };
 		3ECB6E0629092050004C67AE /* AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyles.swift; sourceTree = "<group>"; };
+		3ECB6E0E290B592F004C67AE /* CustomComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomComponents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				3ECB6E022908AD0C004C67AE /* StockDetailView.swift */,
 				3ECB6E042908B49F004C67AE /* PortfolioDetailsView.swift */,
 				3ECB6E0629092050004C67AE /* AppStyles.swift */,
+				3ECB6E0E290B592F004C67AE /* CustomComponents.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				3EC97A202907269600E80C8D /* ContentView.swift in Sources */,
 				3EBFB34A2907CB8F002CC097 /* DecoderHelpers.swift in Sources */,
 				3EC97A5329074F2100E80C8D /* Team.swift in Sources */,
+				3ECB6E0F290B592F004C67AE /* CustomComponents.swift in Sources */,
 				3EBFB34E2908452D002CC097 /* FlatData.swift in Sources */,
 				3EC97A482907310D00E80C8D /* PortfolioView.swift in Sources */,
 				3EC97A4D29073D5A00E80C8D /* Stock.swift in Sources */,
